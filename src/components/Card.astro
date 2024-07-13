@@ -1,0 +1,24 @@
+---
+interface Props {
+    title: string;
+    subtitle?: string;
+    texts: string[];
+    url_image: string;
+}
+
+const { title, subtitle, texts, url_image } = Astro.props;
+---
+
+<div class="flex flex-row gap-4 h-full border-l-4 border-barley-corn-400">
+    <div class="p-4">
+        <h2 class="text-6xl font-bold mb-2 text-barley-corn-200">{title}</h2>
+        <h3 class="text-4xl font-bold mb-3">{subtitle}</h3>
+        {texts.map((text) => (
+            <p class="font-normal mb-3">{text}</p>
+        ))}
+    </div>
+    <img src={url_image} alt="Formación" class="object-cover w-full h-96" />
+</div>
+<style>
+
+</style>

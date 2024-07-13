@@ -1,0 +1,186 @@
+---
+import Card from "../components/Card.astro";
+import Title from "../components/Title.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Welcome to Astro.">
+	<main class="flex flex-col mx-auto lg:w-4/5 md:px-8 sm:px-2">
+		<section class="flex flex-col gap-2 mb-6">
+			<div class="flex flex-nowrap lg:flex-row md:flex-col sm:flex-col items-center gap-2 my-10">
+					<div class="flex flex-col gap-2">
+						<h1 class="text-8xl font-bold">Juan Rinaldi</h1>
+						<h1 class="text-8xl font-bold">Grupo Bologna</h1>
+						<div>
+							<p class="text-2xl">
+								Abogado por la Facultad de Derecho y Ciencias
+								Sociales de la Universidad de Morón (1987).
+							</p>
+							<p class="text-2xl">
+								Especialista en Derecho, Políca y Criminología
+								en el Derecho del Trabajo por la Universidad de
+								Salamanca (1998 y 1999)
+							</p>
+						</div>
+					</div>
+					<img
+						class="h-auto max-w-full"
+						src="../../public/images/juan-rinaldi.jpg"
+						alt="Juan Rinaldi"
+					/>
+			</div>
+			<p class="font-bold text-center">
+				36 años de experiencia en el ámbito laboral, indagando
+				incansablemente la aplicación de las normas y en ejercicio
+				de mi profesión como abogado.
+			</p>
+		</section>
+
+		<section
+			class="min-h-[42rem] bg-primary text-white mb-6 flex justify-center items-center"
+		>
+			<div class="p-10 flex flex-col">
+				<h1 class="font-bold text-8xl mb-4 lg:text-left md:text-center">
+					Actividades Destacadas
+				</h1>
+				<li class="list-none divide-y">
+					<ul class="font-bold text-4xl py-8">
+						01 - Director en el Instituto de Derecho Social y del
+						Trabajo
+					</ul>
+					<ul class="font-bold text-4xl py-8">
+						02 - Representante Argentino ante la OIT en las
+						Conferencias Anuales por la Asociación ADEBA
+					</ul>
+					<ul class="font-bold text-4xl py-8">
+						03 - Director académico de la Diplomatura en Relaciones
+						Laborales en la Universidad de Belgrano
+					</ul>
+				</li>
+			</div>
+		</section>
+
+		<section class="min-h-[42rem] mb-6 flex flex-col items-center">
+			<h1 class="font-bold text-9xl mb-4 text-balance text-center">
+				“Soy especialista en Análisis Laboral”
+			</h1>
+
+			<div
+				class="h-[30rem] w-4/5 bg-barley-corn-400 text-white flex flex-row flex-nowrap gap-10 justify-center p-8"
+			>
+				<div class="flex-1">
+					<title>Formación</title>
+					<main class="flex flex-col gap-4">
+						<p class="text-2xl">
+							Curso de Especialización para Expertos
+							Latinoamericanos en Relaciones Laborales y Temas del
+							Trabajo: Mercados de Trabajo y Políticas de Empleo,
+							por la Universidad de Bologna (2001).
+						</p>
+						<p class="text-2xl">
+							Programa de Formación de Normas Internacionales del
+							Trabajo en el Centro Internacional de Formación
+							Turín perteneciente a la OIT (2002 y 2016).
+						</p>
+						<p class="text-2xl">
+							Normas Internacionales: Proyecto de Evaluación
+							(Segunda Fase), en Turín/Ginebra (2003).
+						</p>
+					</main>
+				</div>
+
+				<div class="flex-1">
+					<title>Experiencia</title>
+					<main class="flex flex-col gap-4">
+						<p class="text-2xl">
+							Asesor de la constituyente reformada de la
+							Constitución Nacional y de la estatuyente porteña
+							(1996)
+						</p>
+						<p class="text-2xl">
+							Abogado en distintos gremios y apoderado del CGT
+							hasta 2005.
+						</p>
+						<p class="text-2xl">Superintendente de Salud en 2009</p>
+						<p class="text-2xl">Apoderado de Banco Macro en 2020</p>
+						<p class="text-2xl">Apoderado de Jorge Brito</p>
+						<p class="text-2xl">
+							Asesor del Directorio de Edenor desde 2023
+						</p>
+					</main>
+				</div>
+			</div>
+		</section>
+
+		<section class="min-h-[42rem]">
+			<Card
+				title="Representando Argentina"
+				texts={[
+					"OIT: Rinaldi representa a Argenna en la 111a. reunión de la Conferencia Internacional del Trabajo en Ginebra",
+					"EEl Analista Laboral, el Dr. Juan Rinaldi, es delegado por la OIT (Organización Internacional del Trabajo) para representar a Argenna en Suiza, Ginebra, en su 111.a Conferencia Anual, que será llevada a cabo del 5 al 16 de junio de este año",
+					"Habrá tanto delegados de trabajadores, empleadores y gobiernos de los 187 Estados Miembros de la OI",
+					"Los cuales abordarán temas muy importantes sobre la economía mundial, entre ellos: una transición justa hacia economías sostenibles e inclusivas, aprendizajes de calidad, y la protección de los trabajadores.",
+				]}
+				url_image="../../public/images/card-1.jpg"
+			/>
+			<Card
+				title="CURSO DE RELACIONES INDUSTRIALES"
+				subtitle="Universidad de Bologna"
+				texts={[
+					"El Instuto de Derecho Social y del Trabajo, con la dirección del Dr. Juan Rinaldi y en junto con la Universidad de Bologna – Italia con el Dr. Andrea Lassandari, organizan promover una formación especializada para reconocidos profesionales argennos de la carrera de Derecho Laboral. Esto forma parte del conjunto de iintercambios desarrollados entre ambas instuciones",
+					"Esto intenta profundizar en nuevos enfoques que permitan abordar las transformaciones actuales que recorren hoy las relaciones sociales. En este aspecto busca vincular, desde una perspecva interdisciplinaria, la mulplicidad de condiciones que a nivel global y local atraviesan este campo de trabajo, además del conjun to de categorías incluidas en él. Este curso se propone comprender, desde el ámbito del Derecho, las transformaciones profundas en los esquemas tradicionales que organizan y regulan las relaciones industriales en la actualidad",
+				]}
+				url_image="../../public/images/card-2.jpg"
+			/>
+			<Card
+				title="Reunion de los egresados de Bologna en la universidad de San Pablo celebrada este año"
+				subtitle="Universidad de Bologna"
+				texts={[
+					"esde 1988 se ha desarrollado con el auspicio de la Universidad de Bologna, Italia, la Organización Internacional del Trabajo y el Ministerio de Relaciones Exteriores de Italia, un Curso para Expertos Lanoamericanos en Relaciones del Trabajo, que año aa año ha ido formando especialistas provenientes de la sociología, la economía, el derecho, las ciencias polícas, la ingeniería, con actuación en el campo de las relaciones laborales.",
+				]}
+				url_image="../../public/images/card-3.jpg"
+			/>
+		</section>
+
+		<section class="min-h-[21rem]">
+			<Title title="Universidad de Bologna"/>
+			<div class="flex flex-row gap-4">
+				<p class="font-normal mb-3">Desde 1988 se ha desarrollado con el auspicio de la Universidad de Bologna, Italia, la Organización Internacional del Trabajo y el Ministerio de Relaciones Exteriores de Italia, un Curso para Expertos Lanoamericanos en Relaciones del Trabajo, que año a año ha ido formando especialistas provenientes de la sociología, la economía, el derecho, las ciencias polícas, la inla ingeniería, con actuación en el campo de las relaciones laborales</p>
+				<img src="../../public/images/logo-bologna.jpg" alt="Grupo Bologna" class="object-cover w-full h-21" />
+			</div>
+		</section>
+
+		<section class="min-h-[21rem]">
+			<Title title="¿Quienes somos?"/>
+			<div class="flex flex-row gap-4">
+				<div>
+					<p class="font-normal mb-3">La Asociación de Especialistas en Relaciones Laborales Ex Becarios de la Universidad de Bologna, Centro Internacional de Formación de la OIT y de la Universidad de Caslla La Mancha (Sección Argenna), conocida como “Grupo Bologna”, fue constuida en el mes de mayo del año 2007 bajo la ﬁgura de asociación civil sin ﬁnes de lucro, con el propósito de nuclear a los parcipantes ex becarios del “Curso para expertos lanoamericanos en relaciones del trabajo”</p>
+					<p class="font-normal mb-3">enemos como objeto promover, fomentar y difundir las disciplinas relacionadas con el trabajo, las relaciones laborales y las que resulten cienﬁca y técnicamente aﬁnes, con una especial vocación triparta (trabajadores, empleadores y Estado)</p>
+					<p class="font-normal mb-3">Nuestra Asociación, en sus acvidades en Argenna, ha propiciado Encuentros y Seminarios con especialistas de alto nivel, a la vez que ha organizado y dirigido Cursos de Capacitación para jóvenes pertenecientes al área de las relaciones laborales. Siempre con miras a formar esa masa críca de pensamiento y acción que, en muchos casos, alimenta de parcipantes a los cursos que se realizan año a año en la sede actual del curso en la Universidad de Caslla La de Caslla La Mancha, Toledo, España</p>
+					<p class="font-normal mb-3">Se caracteriza por una convocatoria amplia y dirigida a asegurar la interdisciplinariedad de la membresía tanto al Curso de Expertos, como a la integración de nuestra Asociación que recibe como socios y socias a los ex becarios del Curso</p>
+					<p class="font-normal mb-3">Por tales movos, orgullosamente contamos entre nuestra nómina de socias y socios con destacados miembros del mundo del Trabajo, referentes de los actores sociales, funcionarios/as de gobierno, asesores de sindicatos y de las organizaciones empresarias; todas y todos con amplia trayectoria académica y profesional. Incluso, muchos/as de ellos/as son o han sido consultores de la OIT o han integrado la Organización en sus órganos de gesón o en áreas técnicas.</p>
+				</div>
+				<div class="flex flex-col justify">
+					<img src="../../public/images/quienes-somos-1.jpg" alt="Grupo Bologna" class="object-cover w-full h-21" />
+					<img src="../../public/images/quienes-somos-2.jpeg" alt="Grupo Bologna" class="object-cover w-full h-21" />
+				</div>
+			</div>
+		</section>
+
+		<section class="min-h-[21rem]">
+			<Title title="Diplomas"/>
+			<div class="flex gap-6 justify-around mb-4">
+				<img class="h-auto w-80 border-8 border-barley-corn-400" src="../../public/images/diploma-1.jpg" alt="">
+				<img class="h-auto w-80 border-8 border-barley-corn-400" src="../../public/images/certificado.jpg" alt="">
+				<img class="h-auto w-80 border-8 border-barley-corn-400" src="../../public/images/diploma-2.jpg" alt="">
+			</div>
+			<img class="h-auto w-3/5 mx-auto border-8 border-barley-corn-400" src="../../public/images/diploma-central.jpg" alt="">
+		</section>
+	</main>
+
+	<style is:global>
+		main {
+			align-items: center;
+		}
+	</style>
+</Layout>
