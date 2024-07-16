@@ -6,7 +6,7 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Welcome to Astro.">
 	<main class="flex flex-col mx-auto lg:w-4/5 md:px-8 sm:px-2">
-		<section class="flex flex-col gap-2 mb-6">
+		<section id="home" class="flex flex-col gap-2 mb-6">
 			<div class="flex flex-nowrap lg:flex-row md:flex-col sm:flex-col items-center gap-2 my-10">
 					<div class="flex flex-col gap-2">
 						<h1 class="text-8xl font-bold">Juan Rinaldi</h1>
@@ -36,9 +36,7 @@ import Layout from "../layouts/Layout.astro";
 			</p>
 		</section>
 
-		<section
-			class="min-h-[42rem] bg-primary text-white mb-6 flex justify-center items-center"
-		>
+		<section id="especialista" class="min-h-[42rem] bg-primary text-white mb-6 flex justify-center items-center">
 			<div class="p-10 flex flex-col">
 				<h1 class="font-bold text-8xl mb-4 lg:text-left md:text-center">
 					Actividades Destacadas
@@ -112,37 +110,56 @@ import Layout from "../layouts/Layout.astro";
 			</div>
 		</section>
 
-		<section class="min-h-[42rem]">
-			<Card
-				title="Representando Argentina"
-				texts={[
-					"OIT: Rinaldi representa a Argenna en la 111a. reunión de la Conferencia Internacional del Trabajo en Ginebra",
-					"EEl Analista Laboral, el Dr. Juan Rinaldi, es delegado por la OIT (Organización Internacional del Trabajo) para representar a Argenna en Suiza, Ginebra, en su 111.a Conferencia Anual, que será llevada a cabo del 5 al 16 de junio de este año",
-					"Habrá tanto delegados de trabajadores, empleadores y gobiernos de los 187 Estados Miembros de la OI",
-					"Los cuales abordarán temas muy importantes sobre la economía mundial, entre ellos: una transición justa hacia economías sostenibles e inclusivas, aprendizajes de calidad, y la protección de los trabajadores.",
-				]}
-				url_image="../../public/images/card-1.jpg"
-			/>
-			<Card
-				title="CURSO DE RELACIONES INDUSTRIALES"
-				subtitle="Universidad de Bologna"
-				texts={[
-					"El Instuto de Derecho Social y del Trabajo, con la dirección del Dr. Juan Rinaldi y en junto con la Universidad de Bologna – Italia con el Dr. Andrea Lassandari, organizan promover una formación especializada para reconocidos profesionales argennos de la carrera de Derecho Laboral. Esto forma parte del conjunto de iintercambios desarrollados entre ambas instuciones",
-					"Esto intenta profundizar en nuevos enfoques que permitan abordar las transformaciones actuales que recorren hoy las relaciones sociales. En este aspecto busca vincular, desde una perspecva interdisciplinaria, la mulplicidad de condiciones que a nivel global y local atraviesan este campo de trabajo, además del conjun to de categorías incluidas en él. Este curso se propone comprender, desde el ámbito del Derecho, las transformaciones profundas en los esquemas tradicionales que organizan y regulan las relaciones industriales en la actualidad",
-				]}
-				url_image="../../public/images/card-2.jpg"
-			/>
-			<Card
-				title="Reunion de los egresados de Bologna en la universidad de San Pablo celebrada este año"
-				subtitle="Universidad de Bologna"
-				texts={[
-					"esde 1988 se ha desarrollado con el auspicio de la Universidad de Bologna, Italia, la Organización Internacional del Trabajo y el Ministerio de Relaciones Exteriores de Italia, un Curso para Expertos Lanoamericanos en Relaciones del Trabajo, que año aa año ha ido formando especialistas provenientes de la sociología, la economía, el derecho, las ciencias polícas, la ingeniería, con actuación en el campo de las relaciones laborales.",
-				]}
-				url_image="../../public/images/card-3.jpg"
-			/>
+
+		<section id="sobre-mi" class="min-h-[42rem]">
+			<h1 class="text-8xl font-bold text-barley-corn-900 mb-4">Sobre mi</h1>
+			<div class="flex flex-col gap-8">
+				<Card 
+					texts={[
+						"Abogado por la Facultad de Derecho y Ciencias Sociales de la Universidad de Morón (1987).",
+						"Especialista en Derecho, Política y Criminología en Derecho del Trabajo por la Universidad de Salamanca (1998 y 1999).",
+						"En 2001 tuve el honor de participar en el dictado de clases en la Universidad de Bologna, en Italia, invitado por el Dr. Patricio Maraniello, Juez Federal del Juzgado nro. 5 Civil y Comercial de la Capital Federal y Presidente de la Asociación Argentina de Justicia Constitucional (AAJC).",
+						"También representé a Argentina en Suiza, Ginebra, en su 111a Conferencia Anual por ser delegado de la OIT (Organización Internacional del Trabajo).",
+						"Se abordaron temas muy importantes sobre la economía mundial, entre ellos: una transición justa hacia economías sostenibles e inclusivas, aprendizajes de calidad, y la protección de los trabajadores.",
+						"Culminando en 2023 en un encuentro anual de Especialistas en Relaciones Laborales Grupo Bologna, Castilla La-Mancha, Turín, que se celebró en esta oportunidad en San Pablo, Brasil.",
+						"He realizado diferentes cursos en esta Universidad, especializándome en Normas Internacionales del Trabajo, los cuales han sido muy enriquecedores para mi carrera, desempeñándome desde el año 1989, con 33 años de experiencia en el rubro."
+					]}
+					url_image="../../public/images/sobre-mi.jpg" 
+					imagePosition="right" 
+					border={false}
+				/>
+
+				<Card
+					title="Representando Argentina"
+					texts={[
+						"OIT: Rinaldi representa a Argenna en la 111a. reunión de la Conferencia Internacional del Trabajo en Ginebra",
+						"EEl Analista Laboral, el Dr. Juan Rinaldi, es delegado por la OIT (Organización Internacional del Trabajo) para representar a Argenna en Suiza, Ginebra, en su 111.a Conferencia Anual, que será llevada a cabo del 5 al 16 de junio de este año",
+						"Habrá tanto delegados de trabajadores, empleadores y gobiernos de los 187 Estados Miembros de la OI",
+						"Los cuales abordarán temas muy importantes sobre la economía mundial, entre ellos: una transición justa hacia economías sostenibles e inclusivas, aprendizajes de calidad, y la protección de los trabajadores.",
+					]}
+					url_image="../../public/images/card-1.jpg"
+				/>
+				<Card
+					title="CURSO DE RELACIONES INDUSTRIALES"
+					subtitle="Universidad de Bologna"
+					texts={[
+						"El Instuto de Derecho Social y del Trabajo, con la dirección del Dr. Juan Rinaldi y en junto con la Universidad de Bologna – Italia con el Dr. Andrea Lassandari, organizan promover una formación especializada para reconocidos profesionales argennos de la carrera de Derecho Laboral. Esto forma parte del conjunto de iintercambios desarrollados entre ambas instuciones",
+						"Esto intenta profundizar en nuevos enfoques que permitan abordar las transformaciones actuales que recorren hoy las relaciones sociales. En este aspecto busca vincular, desde una perspecva interdisciplinaria, la mulplicidad de condiciones que a nivel global y local atraviesan este campo de trabajo, además del conjun to de categorías incluidas en él. Este curso se propone comprender, desde el ámbito del Derecho, las transformaciones profundas en los esquemas tradicionales que organizan y regulan las relaciones industriales en la actualidad",
+					]}
+					url_image="../../public/images/card-2.jpg"
+				/>
+				<Card
+					title="Reunion de los egresados de Bologna en la universidad de San Pablo celebrada este año"
+					subtitle="Universidad de Bologna"
+					texts={[
+						"esde 1988 se ha desarrollado con el auspicio de la Universidad de Bologna, Italia, la Organización Internacional del Trabajo y el Ministerio de Relaciones Exteriores de Italia, un Curso para Expertos Lanoamericanos en Relaciones del Trabajo, que año aa año ha ido formando especialistas provenientes de la sociología, la economía, el derecho, las ciencias polícas, la ingeniería, con actuación en el campo de las relaciones laborales.",
+					]}
+					url_image="../../public/images/card-3.jpg"
+				/>
+			</div>
 		</section>
 
-		<section class="min-h-[21rem]">
+		<section id="bologna" class="min-h-[21rem]">
 			<Title title="Universidad de Bologna"/>
 			<div class="flex flex-row gap-4">
 				<p class="font-normal mb-3">Desde 1988 se ha desarrollado con el auspicio de la Universidad de Bologna, Italia, la Organización Internacional del Trabajo y el Ministerio de Relaciones Exteriores de Italia, un Curso para Expertos Lanoamericanos en Relaciones del Trabajo, que año a año ha ido formando especialistas provenientes de la sociología, la economía, el derecho, las ciencias polícas, la inla ingeniería, con actuación en el campo de las relaciones laborales</p>
@@ -150,7 +167,7 @@ import Layout from "../layouts/Layout.astro";
 			</div>
 		</section>
 
-		<section class="min-h-[21rem]">
+		<section id="quienes-somos" class="min-h-[21rem]">
 			<Title title="¿Quienes somos?"/>
 			<div class="flex flex-row gap-4">
 				<div>
@@ -167,7 +184,7 @@ import Layout from "../layouts/Layout.astro";
 			</div>
 		</section>
 
-		<section class="min-h-[21rem]">
+		<section id="diplomas" class="min-h-[21rem]">
 			<Title title="Diplomas"/>
 			<div class="flex gap-6 justify-around mb-4">
 				<img class="h-auto w-80 border-8 border-barley-corn-400" src="../../public/images/diploma-1.jpg" alt="">
