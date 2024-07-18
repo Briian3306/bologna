@@ -5,35 +5,44 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-	<main class="flex flex-col mx-auto lg:w-4/5 md:px-8 sm:px-2">
-		<section id="home" class="flex flex-col gap-2 mb-6">
-			<div class="flex flex-nowrap lg:flex-row md:flex-col sm:flex-col items-center gap-2 my-10">
-					<div class="flex flex-col gap-2">
-						<h1 class="text-8xl font-bold">Juan Rinaldi</h1>
-						<h1 class="text-8xl font-bold">Grupo Bologna</h1>
-						<div>
-							<p class="text-2xl">
-								Abogado por la Facultad de Derecho y Ciencias
-								Sociales de la Universidad de Morón (1987).
-							</p>
-							<p class="text-2xl">
-								Especialista en Derecho, Políca y Criminología
-								en el Derecho del Trabajo por la Universidad de
-								Salamanca (1998 y 1999)
-							</p>
+	<main class="flex flex-col mx-auto lg:w-11/12 md:w-11/12 sm:w-11/12">
+		<section id="home" class="min-h-[100vh] flex flex-col">
+			<div class="flex-1 flex items-stretch pt-[70px]">
+				<div class="min-h-100 flex flex-nowrap justify-center  lg:flex-row md:flex-col-reverse sm:flex-col-reverse items-center gap-2">
+						<div class="md:w-full lg:w-1/2 flex flex-col gap-2 flex-grow-0">
+							<header>
+								<h1 class="md:text-7xl sm:text-5xl font-bold">Juan Rinaldi</h1>
+								<h2 class="md:text-7xl sm:text-5xl font-bold mb-3">Grupo Bologna</h2>
+							</header>
+							<section>
+								<article>
+									<p class="text-2xl mb-1 pr-6">
+									Abogado por la Facultad de Derecho y Ciencias Sociales de la Universidad de Morón (1987).
+									</p>
+									<p class="text-2xl pr-6">
+									Especialista en Derecho, Política y Criminología en el Derecho del Trabajo por la Universidad de Salamanca (1998 y 1999).
+									</p>
+								</article>
+							</section>
 						</div>
-					</div>
-					<img
-						class="h-auto max-w-full"
-						src="../../public/images/juan-rinaldi.jpg"
-						alt="Juan Rinaldi"
-					/>
+						<div class="md:w-full lg:w-1/2">
+							<div class="aspect-w-16 aspect-h-9">
+								<img
+								class="h-auto max-w-full object-contain m-auto"
+								src="../../public/images/juan-rinaldi.jpg"
+								alt="Juan Rinaldi"
+								/>
+							</div>	
+						</div>
+				</div>
 			</div>
-			<p class="font-bold text-center">
-				36 años de experiencia en el ámbito laboral, indagando
-				incansablemente la aplicación de las normas y en ejercicio
-				de mi profesión como abogado.
-			</p>
+			<div class="flex-shrink-0 h-16">
+				<p class="font-bold text-center">
+					36 años de experiencia en el ámbito laboral, indagando
+					incansablemente la aplicación de las normas y en ejercicio
+					de mi profesión como abogado.
+				</p>
+			</div>
 		</section>
 
 		<section id="especialista" class="min-h-[42rem] bg-primary text-white mb-6 flex justify-center items-center">
@@ -64,7 +73,7 @@ import Layout from "../layouts/Layout.astro";
 			</h1>
 
 			<div
-				class="h-[30rem] w-4/5 bg-barley-corn-400 text-white flex flex-row flex-nowrap gap-10 justify-center p-8"
+				class="h-[30rem] bg-barley-corn-400 text-white flex flex-row flex-nowrap gap-10 justify-center p-8"
 			>
 				<div class="flex-1">
 					<title>Formación</title>
@@ -192,7 +201,7 @@ import Layout from "../layouts/Layout.astro";
 				<img class="h-auto w-80 border-8 border-barley-corn-400" src="../../public/images/diploma-2.jpg" alt="">
 			</div>
 			<img class="h-auto w-3/5 mx-auto border-8 border-barley-corn-400" src="../../public/images/diploma-central.jpg" alt="">
-		</section>
+		</section> 
 	</main>
 
 	<style is:global>
