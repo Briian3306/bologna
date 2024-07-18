@@ -5,7 +5,7 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-	<main class="flex flex-col mx-auto lg:w-11/12 md:w-11/12 sm:w-11/12">
+	<main class="flex flex-col mx-auto lg:w-11/12 md:w-11/12 sm:w-11/12 xs:text-xs gap-10">
 		<section id="home" class="min-h-[100vh] flex flex-col">
 			<div class="flex-1 flex items-stretch pt-[70px]">
 				<div class="min-h-100 flex flex-nowrap justify-center  lg:flex-row md:flex-col-reverse sm:flex-col-reverse items-center gap-2">
@@ -45,7 +45,7 @@ import Layout from "../layouts/Layout.astro";
 			</div>
 		</section>
 
-		<section id="especialista" class="min-h-[42rem] bg-primary text-white mb-6 flex justify-center items-center">
+		<section id="actividades" class="min-h-[42rem] bg-primary text-white mb-6 flex justify-center items-center">
 			<div class="p-10 flex flex-col">
 				<h1 class="font-bold text-8xl mb-4 lg:text-left md:text-center">
 					Actividades Destacadas
@@ -67,17 +67,17 @@ import Layout from "../layouts/Layout.astro";
 			</div>
 		</section>
 
-		<section class="min-h-[42rem] mb-6 flex flex-col items-center">
+		<section id="quien-soy" class="min-h-[42rem] mb-6 flex flex-col items-center">
 			<h1 class="font-bold text-9xl mb-4 text-balance text-center">
 				“Soy especialista en Análisis Laboral”
 			</h1>
 
 			<div
-				class="h-[30rem] bg-barley-corn-400 text-white flex flex-row flex-nowrap gap-10 justify-center p-8"
+				class="min-h-[30rem] bg-barley-corn-400 text-white flex flex-row flex-nowrap gap-10 justify-center p-8"
 			>
 				<div class="flex-1">
-					<title>Formación</title>
-					<main class="flex flex-col gap-4">
+					<h3 class="text-3xl font-bold mb-2">Formacion</h3>
+					<main class="flex flex-col gap-4 items-stretch">
 						<p class="text-2xl">
 							Curso de Especialización para Expertos
 							Latinoamericanos en Relaciones Laborales y Temas del
@@ -97,22 +97,14 @@ import Layout from "../layouts/Layout.astro";
 				</div>
 
 				<div class="flex-1">
-					<title>Experiencia</title>
-					<main class="flex flex-col gap-4">
-						<p class="text-2xl">
-							Asesor de la constituyente reformada de la
-							Constitución Nacional y de la estatuyente porteña
-							(1996)
-						</p>
-						<p class="text-2xl">
-							Abogado en distintos gremios y apoderado del CGT
-							hasta 2005.
-						</p>
+					<h3 class="text-3xl font-bold mb-2">Experiencia</h3>
+					<main class="flex flex-col gap-4 items-stretch">
+						<p class="text-2xl">Asesor de la constituyente reformada de la Constitución Nacional y de la estatuyente porteña (1996)</p>
+						<p class="text-2xl">Abogado en distintos gremios y apoderado del CGT hasta 2005.</p>
 						<p class="text-2xl">Superintendente de Salud en 2009</p>
 						<p class="text-2xl">Apoderado de Banco Macro en 2020</p>
 						<p class="text-2xl">Apoderado de Jorge Brito</p>
-						<p class="text-2xl">
-							Asesor del Directorio de Edenor desde 2023
+						<p class="text-2xl">Asesor del Directorio de Edenor desde 2023
 						</p>
 					</main>
 				</div>
@@ -122,22 +114,26 @@ import Layout from "../layouts/Layout.astro";
 
 		<section id="sobre-mi" class="min-h-[42rem]">
 			<h1 class="text-8xl font-bold text-barley-corn-900 mb-4">Sobre mi</h1>
-			<div class="flex flex-col gap-8">
-				<Card 
-					texts={[
-						"Abogado por la Facultad de Derecho y Ciencias Sociales de la Universidad de Morón (1987).",
-						"Especialista en Derecho, Política y Criminología en Derecho del Trabajo por la Universidad de Salamanca (1998 y 1999).",
-						"En 2001 tuve el honor de participar en el dictado de clases en la Universidad de Bologna, en Italia, invitado por el Dr. Patricio Maraniello, Juez Federal del Juzgado nro. 5 Civil y Comercial de la Capital Federal y Presidente de la Asociación Argentina de Justicia Constitucional (AAJC).",
-						"También representé a Argentina en Suiza, Ginebra, en su 111a Conferencia Anual por ser delegado de la OIT (Organización Internacional del Trabajo).",
-						"Se abordaron temas muy importantes sobre la economía mundial, entre ellos: una transición justa hacia economías sostenibles e inclusivas, aprendizajes de calidad, y la protección de los trabajadores.",
-						"Culminando en 2023 en un encuentro anual de Especialistas en Relaciones Laborales Grupo Bologna, Castilla La-Mancha, Turín, que se celebró en esta oportunidad en San Pablo, Brasil.",
-						"He realizado diferentes cursos en esta Universidad, especializándome en Normas Internacionales del Trabajo, los cuales han sido muy enriquecedores para mi carrera, desempeñándome desde el año 1989, con 33 años de experiencia en el rubro."
-					]}
-					url_image="../../public/images/sobre-mi.jpg" 
-					imagePosition="right" 
-					border={false}
-				/>
+			<Card 
+				texts={[
+					"Abogado por la Facultad de Derecho y Ciencias Sociales de la Universidad de Morón (1987).",
+					"Especialista en Derecho, Política y Criminología en Derecho del Trabajo por la Universidad de Salamanca (1998 y 1999).",
+					"En 2001 tuve el honor de participar en el dictado de clases en la Universidad de Bologna, en Italia, invitado por el Dr. Patricio Maraniello, Juez Federal del Juzgado nro. 5 Civil y Comercial de la Capital Federal y Presidente de la Asociación Argentina de Justicia Constitucional (AAJC).",
+					"También representé a Argentina en Suiza, Ginebra, en su 111a Conferencia Anual por ser delegado de la OIT (Organización Internacional del Trabajo).",
+					"Se abordaron temas muy importantes sobre la economía mundial, entre ellos: una transición justa hacia economías sostenibles e inclusivas, aprendizajes de calidad, y la protección de los trabajadores.",
+					"Culminando en 2023 en un encuentro anual de Especialistas en Relaciones Laborales Grupo Bologna, Castilla La-Mancha, Turín, que se celebró en esta oportunidad en San Pablo, Brasil.",
+					"He realizado diferentes cursos en esta Universidad, especializándome en Normas Internacionales del Trabajo, los cuales han sido muy enriquecedores para mi carrera, desempeñándome desde el año 1989, con 33 años de experiencia en el rubro."
+				]}
+				url_image="../../public/images/sobre-mi.jpg" 
+				imagePosition="right" 
+				border={false}
+			/>
+			
+		</section>
 
+
+		<section id="prensa" class="min-h-[42rem]">
+			<div class="flex flex-col gap-8">
 				<Card
 					title="Representando Argentina"
 					texts={[
