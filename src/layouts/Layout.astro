@@ -21,12 +21,61 @@ const { title } = Astro.props;
 	<body class="bg-barley-corn-50">
 		<Header/>
 		<slot />
+		<a class="ir-arriba" title="Volver arriba">
+			<span class="fa-stack">
+			  <i class="fa fa-circle fa-stack-2x"></i>
+			  <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
+			</span>
+		  </a>
 	</body>
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			irArriba();
+		});
+	
+		function irArriba() {
+			const irArribaBtn = document.querySelector('.ir-arriba');
+			const irAbajoBtn = document.querySelector('.ir-abajo');
+	
+			if (irArribaBtn) {
+				irArribaBtn.addEventListener('click', function() {
+					window.scrollTo({ top: 0, behavior: 'smooth' });
+				});
+			}
+	
+			window.addEventListener('scroll', function() {
+				if (window.scrollY > 0) {
+					if (irArribaBtn) {
+						irArribaBtn.style.display = 'block';
+					}
+				} else {
+					if (irArribaBtn) {
+						irArribaBtn.style.display = 'none';
+					}
+				}
+			});
+	
+			if (irAbajoBtn) {
+				irAbajoBtn.addEventListener('click', function() {
+					window.scrollTo({ top: 1000, behavior: 'smooth' });
+				});
+			}
+		}
+	</script>
 </html>
 <style is:global>
 	:root {
-		
+		.ir-arriba{
+			display:none;
+			background-repeat:no-repeat;
+			font-size:20px;
+			color:black;
+			cursor:pointer;
+			position:fixed;
+			bottom:100px;
+			right:100px;
+			z-index:2;
+		}
 
 	}
-
 </style>
