@@ -16,10 +16,10 @@ import Layout from "../layouts/Layout.astro";
 							</header>
 							<section>
 								<article>
-									<p class="text-2xl mb-1 pr-6">
+									<p class="md:text-2xl sm:text-xl mb-1 pr-6">
 									Abogado por la Facultad de Derecho y Ciencias Sociales de la Universidad de Morón (1987).
 									</p>
-									<p class="text-2xl pr-6">
+									<p class="md:text-2xl sm:text-xl pr-6">
 									Especialista en Derecho, Política y Criminología en el Derecho del Trabajo por la Universidad de Salamanca (1998 y 1999).
 									</p>
 								</article>
@@ -37,7 +37,7 @@ import Layout from "../layouts/Layout.astro";
 				</div>
 			</div>
 			<div class="flex-shrink-0 h-16">
-				<p class="font-bold text-center">
+				<p class="font-bold text-center md:text-xl sm:text-xs">
 					36 años de experiencia en el ámbito laboral, indagando
 					incansablemente la aplicación de las normas y en ejercicio
 					de mi profesión como abogado.
@@ -172,17 +172,17 @@ import Layout from "../layouts/Layout.astro";
 
 		<section id="quienes-somos" class="min-h-[21rem]">
 			<Title title="¿Quienes somos?"/>
-			<div class="flex flex-row gap-4">
-				<div class="">
+			<div class="flex md:flex-row sm:flex-col gap-4">
+				<div class="lg:w-3/4 md:w-3/5 sm:w-100">
 					<p class="mb-3 lg:text-2xl md:text-xl sm:text-xs">La Asociación de Especialistas en Relaciones Laborales Ex Becarios de la Universidad de Bologna, Centro Internacional de Formación de la OIT y de la Universidad de Caslla La Mancha (Sección Argenna), conocida como “Grupo Bologna”, fue constuida en el mes de mayo del año 2007 bajo la ﬁgura de asociación civil sin ﬁnes de lucro, con el propósito de nuclear a los parcipantes ex becarios del “Curso para expertos lanoamericanos en relaciones del trabajo”</p>
 					<p class="mb-3 lg:text-2xl md:text-xl sm:text-xs">enemos como objeto promover, fomentar y difundir las disciplinas relacionadas con el trabajo, las relaciones laborales y las que resulten cienﬁca y técnicamente aﬁnes, con una especial vocación triparta (trabajadores, empleadores y Estado)</p>
 					<p class="mb-3 lg:text-2xl md:text-xl sm:text-xs">Nuestra Asociación, en sus acvidades en Argenna, ha propiciado Encuentros y Seminarios con especialistas de alto nivel, a la vez que ha organizado y dirigido Cursos de Capacitación para jóvenes pertenecientes al área de las relaciones laborales. Siempre con miras a formar esa masa críca de pensamiento y acción que, en muchos casos, alimenta de parcipantes a los cursos que se realizan año a año en la sede actual del curso en la Universidad de Caslla La de Caslla La Mancha, Toledo, España</p>
 					<p class="mb-3 lg:text-2xl md:text-xl sm:text-xs">Se caracteriza por una convocatoria amplia y dirigida a asegurar la interdisciplinariedad de la membresía tanto al Curso de Expertos, como a la integración de nuestra Asociación que recibe como socios y socias a los ex becarios del Curso</p>
 					<p class="mb-3 lg:text-2xl md:text-xl sm:text-xs">Por tales movos, orgullosamente contamos entre nuestra nómina de socias y socios con destacados miembros del mundo del Trabajo, referentes de los actores sociales, funcionarios/as de gobierno, asesores de sindicatos y de las organizaciones empresarias; todas y todos con amplia trayectoria académica y profesional. Incluso, muchos/as de ellos/as son o han sido consultores de la OIT o han integrado la Organización en sus órganos de gesón o en áreas técnicas.</p>
 				</div>
-				<div class="flex flex-col">
-					<img src="../../public/images/quienes-somos-1.jpg" alt="Grupo Bologna" class="object-cover w-full h-21" />
-					<img src="../../public/images/quienes-somos-2.jpeg" alt="Grupo Bologna" class="object-cover w-full h-21" />
+				<div class="flex gap-2 md:flex-col lg:w-1/4 md:w-2/5 sm:flex-row sm:w-100">
+					<img loading="lazy" src="../../public/images/quienes-somos-1.jpg" alt="Grupo Bologna" class="object-cover w-full lg:h-96 md:h-80 sm:h-[250px] sm:object-center" />
+					<img src="../../public/images/quienes-somos-2.jpeg" alt="Grupo Bologna" class="object-cover w-full lg:h-96 md:h-80 sm:h-[250px] sm:object-top" />
 				</div>
 			</div>
 		</section>
@@ -196,6 +196,33 @@ import Layout from "../layouts/Layout.astro";
 			</div>
 			<img class="object-cover h-auto w-2/4 mx-auto border-8 border-barley-corn-400" src="../../public/images/diploma-central.jpg" alt="">
 		</section> 
+		<section id="contacto">
+			<div class="bg-primary p-6 rounded-lg shadow-md w-full max-w-3xl">
+				<h2 class="text-2xl font-bold text-white mb-4">CONTACTO:</h2>
+				<p class="text-white mb-4">Complete el formulario con sus datos:</p>
+				<form id="contactForm" class="space-y-4">
+				  <div>
+					<input type="text" name="name" placeholder="Su Nombre y apellido..." class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+				  </div>
+				  <div>
+					<input type="email" name="email" placeholder="Su dirección de email..." class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+				  </div>
+				  <div>
+					<textarea name="message" rows="4" placeholder="Su mensaje..." class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+				  </div>
+				  <div>
+					<button type="submit" class="w-full bg-primary text-white py-2 px-4 rounded hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-blue-500">ENVIAR</button>
+				  </div>
+				</form>
+				<div class="mt-4 text-white">
+				  <p>
+					<i class="fas fa-envelope"></i>
+					<a href="mailto:estudiorinaldijuan@gmail.com" class="ml-2">estudiorinaldijuan@gmail.com</a>
+				  </p>
+				</div>
+			  </div>
+		</section>
+		
 	</main>
 
 	<style is:global>
@@ -204,3 +231,17 @@ import Layout from "../layouts/Layout.astro";
 		}
 	</style>
 </Layout>
+
+  <script is:inline>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const name = event.target.name.value;
+      const email = event.target.email.value;
+      const message = event.target.message.value;
+
+      const mailtoLink = `mailto:estudiorinaldijuan@gmail.com?subject=Contacto de ${name}&body=Nombre: ${name}%0AEmail: ${email}%0AMensaje: ${message}`;
+
+      window.location.href = mailtoLink;
+    });
+  </script>

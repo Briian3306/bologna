@@ -1,6 +1,5 @@
 ---
 ---
-
 <nav class="bg-barley-corn-50 border-gray-200 fixed top-0 left-0 right-0 z-[10]">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-end mx-auto p-4">
     <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
@@ -17,6 +16,7 @@
         aria-controls="navbar-cta"
         aria-expanded="false"
         id="navbar-toggle"
+        onclick="toggleMenu()"
       >
         <span class="sr-only">Open main menu</span>
         <svg
@@ -31,7 +31,8 @@
             stroke-linecap="round"
             stroke-linejoin="round"
             stroke-width="2"
-            d="M1 1h15M1 7h15M1 13h15"></path>
+            d="M1 1h15M1 7h15M1 13h15"
+          ></path>
         </svg>
       </button>
     </div>
@@ -42,7 +43,6 @@
       <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-barley-corn-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
         <li>
           <a
-            href="#home"
             class="block py-2 px-3 md:p-0 text-white rounded md:bg-transparent md:text-barley-corn-700 border-b-2 border-transparent hover:border-barley-corn-600"
             aria-current="page"
             onclick="scrollToSection(event, 'home')"
@@ -52,7 +52,6 @@
         </li>
         <li>
           <a
-            href="#actividades"
             class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-barley-corn-600 border-b-2 border-transparent hover:border-barley-corn-600"
             onclick="scrollToSection(event, 'actividades')"
           >
@@ -61,7 +60,6 @@
         </li>
         <li>
           <a
-            href="#quien-soy"
             class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-barley-corn-600 border-b-2 border-transparent hover:border-barley-corn-600"
             onclick="scrollToSection(event, 'quien-soy')"
           >
@@ -70,7 +68,6 @@
         </li>
         <li>
           <a
-            href="#sobre-mi"
             class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-barley-corn-600 border-b-2 border-transparent hover:border-barley-corn-600"
             onclick="scrollToSection(event, 'sobre-mi')"
           >
@@ -79,7 +76,6 @@
         </li>
         <li>
           <a
-            href="#prensa"
             class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-barley-corn-600 border-b-2 border-transparent hover:border-barley-corn-600"
             onclick="scrollToSection(event, 'prensa')"
           >
@@ -88,7 +84,6 @@
         </li>
         <li>
           <a
-            
             class="mr-4 block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-barley-corn-600 border-b-2 border-transparent hover:border-barley-corn-600"
             onclick="scrollToSection(event, 'bologna')"
           >
@@ -100,38 +95,41 @@
   </div>
 </nav>
 
-<script>
-function scrollToSection(event, sectionId) {
-  event.preventDefault();
-  document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
-}
+<script is:inline>
+  function scrollToSection(event, sectionId) {
+    event.preventDefault();
+    const section = document.getElementById(sectionId);
+    const offset = 5 * 16; // 3rem in pixels
+    const sectionPosition = section.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top: sectionPosition, behavior: 'smooth' });
+  }
 
-function toggleMenu() {
-  const navbar = document.getElementById('navbar-cta');
-  navbar.classList.toggle('hidden');
-}
+  function toggleMenu() {
+    const navbar = document.getElementById('navbar-cta');
+    navbar.classList.toggle('hidden');
+  }
 
-document.addEventListener('DOMContentLoaded', () => {
-  const sections = document.querySelectorAll('section');
-  const navLinks = document.querySelectorAll('nav a');
+  document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('nav a');
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        navLinks.forEach(link => {
-          link.classList.remove('border-barley-corn-600');
-          if (link.getAttribute('href')?.substring(1) === entry.target.id) {
-            link.classList.add('border-barley-corn-600');
-          }
-        });
-      }
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => {
+            link.classList.remove('border-barley-corn-600');
+            if (link.onclick.toString().includes(entry.target.id)) {
+              link.classList.add('border-barley-corn-600');
+            }
+          });
+        }
+      });
+    }, {
+      threshold: 0.5
     });
-  }, {
-    threshold: 0.5
-  });
 
-  sections.forEach(section => {
-    observer.observe(section);
+    sections.forEach(section => {
+      observer.observe(section);
+    });
   });
-});
 </script>
