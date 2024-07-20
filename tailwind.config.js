@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+
+import animations from '@midudev/tailwind-animations'
 export default {
   content: [
     './src/**/*.{astro,html,js,jsx}', // Ajusta esta ruta según la estructura de tu proyecto
@@ -41,5 +43,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [animations],
 }

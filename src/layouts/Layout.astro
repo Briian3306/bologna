@@ -10,10 +10,11 @@ import Header from './Header.astro';
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
 		<title>Juan Rinaldi</title>
 	</head>
-	<body class="bg-barley-corn-50">
+
+	<body class="bg-barley-corn-50 relative h-full w-full ">
+		<div class="custom-mask"></div>
 		<Header/>
 		<slot />
 		<a class="ir-arriba" title="Volver arriba">
@@ -32,23 +33,27 @@ import Header from './Header.astro';
 		  </button>
 		  <script>
 			// JavaScript para mostrar/ocultar el botón y subir al hacer clic
-			const scrollTopButton = document.getElementById('scrollTopButton');
-		
-			window.addEventListener('scroll', () => {
-			  if (window.scrollY > 300) {
-				scrollTopButton.classList.remove('hidden');
-				scrollTopButton.classList.add('block');
-			  } else {
-				scrollTopButton.classList.remove('block');
-				scrollTopButton.classList.add('hidden');
+			document.addEventListener('DOMContentLoaded', () => {
+			  const scrollTopButton = document.getElementById('scrollTopButton');
+			
+			  if (scrollTopButton) {
+				window.addEventListener('scroll', () => {
+				  if (window.scrollY > 300) {
+					scrollTopButton.classList.remove('hidden');
+					scrollTopButton.classList.add('block');
+				  } else {
+					scrollTopButton.classList.remove('block');
+					scrollTopButton.classList.add('hidden');
+				  }
+				});
+			
+				scrollTopButton.addEventListener('click', () => {
+				  window.scrollTo({
+					top: 0,
+					behavior: 'smooth'
+				  });
+				});
 			  }
-			});
-		
-			scrollTopButton.addEventListener('click', () => {
-			  window.scrollTo({
-				top: 0,
-				behavior: 'smooth'
-			  });
 			});
 		  </script>
 		
@@ -58,4 +63,19 @@ import Header from './Header.astro';
 	:root {
 
 	}
+	.custom-mask {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		top: 0;
+		background-image: 
+			radial-gradient(circle, rgba(230, 187, 69, 0.1), transparent),
+			linear-gradient(to right, rgba(116, 88, 52, 0.15) 1px, transparent 1px), 
+			linear-gradient(to bottom, rgba(116, 88, 52, 0.15) 1px, transparent 1px);
+		background-size: 24px 34px, 24px 34px, 24px 34px;
+		background-repeat: repeat;
+		z-index: -1;
+		opacity: 0.2; /* Adds overall opacity */
+		}
 </style>
