@@ -6,7 +6,7 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Welcome to Astro.">
 	<main class="flex flex-col mx-auto lg:w-11/12 md:w-11/12 sm:w-11/12 xs:text-xs gap-12">
-		<section id="home" class="min-h-[100vh] flex flex-col mb-6">
+		<section id="home" class="min-h-[100vh] w-full flex flex-col mb-6">
 			<div class="flex-1 flex items-stretch pt-[70px]">
 				<div class="min-h-100 flex flex-nowrap justify-center  lg:flex-row md:flex-col-reverse sm:flex-col-reverse items-center gap-2">
 						<div class="md:w-full lg:w-1/2 flex flex-col gap-2 flex-grow-0">
@@ -45,17 +45,17 @@ import Layout from "../layouts/Layout.astro";
 			</div>
 		</section>
 
-		<section id="actividades" class="min-h-[42rem] bg-primary text-white mb-6 flex justify-center items-center w-100">
+		<section id="actividades" class="min-h-[42rem] w-full bg-primary text-white mb-6 flex justify-center items-center w-100 rounded-lg">
 			<div class="p-10 flex flex-col">
 				<h1 class="font-bold mb-4 text-left lg:text-8xl md:text-6xl sm:text-6xl">
 					Actividades Destacadas
 				</h1>
 				<li class="list-none divide-y">
-					<ul class="font-bold lg:text-4xl lg:py-8 md:text-3x1 md:py-4 sm:text-2x1 sm:py-2">
+					<ul class="font-bold lg:text-4xl lg:py-8 md:text-3x1 md:py-4 sm:text-3x1 sm:py-2">
 						01 - Director en el Instituto de Derecho Social y del
 						Trabajo
 					</ul>
-					<ul class="font-bold lg:text-4xl lg:py-8 md:text-3x1 md:py-4 sm:text-2x1 sm:py-2">
+					<ul class="font-bold lg:text-4xl lg:py-8 md:text-3x1 md:py-4 sm:text-3x1 sm:py-2">
 						02 - Representante Argentino ante la OIT en las
 						Conferencias Anuales por la Asociación ADEBA
 					</ul>
@@ -66,15 +66,16 @@ import Layout from "../layouts/Layout.astro";
 				</li>
 			</div>
 		</section>
-
-		<section id="quien-soy" class="min-h-[42rem] mb-6 flex flex-col items-center">
-			<h1 class="font-bold mb-4 text-balance text-center lg:text-8xl md:text-6xl sm:text-6xl">
+		<section id="quien-soy" class="mb-6">
+			<h1 class="font-bold mb-10 text-balance text-center lg:text-8xl md:text-6xl sm:text-6xl ">
 				“Soy especialista en Análisis Laboral”
 			</h1>
+		</section>
 
-			<div class="min-h-[30rem] bg-barley-corn-400 text-white flex flex-row flex-nowrap gap-10 justify-center p-8">
-				<div class="flex-1">
-					<h3 class="text-3xl font-bold mb-2">Formacion</h3>
+		<section  class="min-h-[42rem] mb-6 w-full flex flex-col items-center">
+			<div class="min-h-[30rem]  text-white flex md:flex-row sm:flex-col flex-nowrap gap-10 justify-center ">
+				<div class="flex-1 bg-barley-corn-400 p-8 rounded-lg">
+					<h3 class="text-4xl font-bold mb-3">Formacion</h3>
 					<main class="flex flex-col gap-4 items-stretch">
 						<p class="lg:text-2xl md:text-xl sm:text-base">
 							Curso de Especialización para Expertos
@@ -94,8 +95,8 @@ import Layout from "../layouts/Layout.astro";
 					</main>
 				</div>
 
-				<div class="flex-1">
-					<h3 class="text-3xl font-bold mb-2">Experiencia</h3>
+				<div class="flex-1 bg-barley-corn-400 p-8 rounded-lg">
+					<h3 class="text-4xl font-bold mb-3">Experiencia</h3>
 					<main class="flex flex-col gap-4 items-stretch">
 						<p class="lg:text-2xl md:text-xl sm:text-base">Asesor de la constituyente reformada de la Constitución Nacional y de la estatuyente porteña (1996)</p>
 						<p class="lg:text-2xl md:text-xl sm:text-base">Abogado en distintos gremios y apoderado del CGT hasta 2005.</p>
@@ -110,7 +111,7 @@ import Layout from "../layouts/Layout.astro";
 		</section>
 
 
-		<section id="sobre-mi" class="min-h-[42rem] mb-6">
+		<section id="sobre-mi" class="min-h-[42rem] mb-6 w-full">
 			<h1 class="font-bold text-barley-corn-900 mb-4 lg:text-8xl md:text-6xl sm:text-6xl">Sobre mi</h1>
 			<Card 
 				texts={[
@@ -123,15 +124,15 @@ import Layout from "../layouts/Layout.astro";
 					"He realizado diferentes cursos en esta Universidad, especializándome en Normas Internacionales del Trabajo, los cuales han sido muy enriquecedores para mi carrera, desempeñándome desde el año 1989, con 33 años de experiencia en el rubro."
 				]}
 				url_image="../../public/images/sobre-mi.jpg" 
-				imagePosition="right" 
+				imagePosition="left" 
 				border={false}
 			/>
 			
 		</section>
 
 
-		<section id="prensa" class="min-h-[42rem] mb-6">
-			<div class="flex flex-col gap-8">
+		<section id="prensa" class="min-h-[42rem] mb-6 w-full">
+			<div class="flex flex-col gap-12">
 				<Card
 					title="Representando Argentina"
 					texts={[
@@ -162,15 +163,15 @@ import Layout from "../layouts/Layout.astro";
 			</div>
 		</section>
 
-		<section id="bologna" class="min-h-[21rem] mb-6">
+		<section id="bologna" class="min-h-[21rem]">
 			<Title title="Universidad de Bologna"/>
 			<div class="flex flex-row justify-around gap-4">
 				<p class="w-3/5 font-normal mb-3 lg:text-2xl md:text-xl sm:text-xs">Desde 1988 se ha desarrollado con el auspicio de la Universidad de Bologna, Italia, la Organización Internacional del Trabajo y el Ministerio de Relaciones Exteriores de Italia, un Curso para Expertos Lanoamericanos en Relaciones del Trabajo, que año a año ha ido formando especialistas provenientes de la sociología, la economía, el derecho, las ciencias polícas, la inla ingeniería, con actuación en el campo de las relaciones laborales</p>
-				<img src="../../public/images/logo-bologna.jpg" alt="Grupo Bologna" class="object-cover aspect-w-4" />
+				<img src="../../public/images/logo-bologna.jpg" alt="Grupo Bologna" class="lg:w-[300px] lg:h-[300px] md:w-[200px] md:h-[200px] sm:w-[150px] sm:h-[150px] object-cover" />
 			</div>
 		</section>
 
-		<section id="quienes-somos" class="min-h-[21rem]">
+		<section id="quienes-somos" class="min-h-[21rem] w-full">
 			<Title title="¿Quienes somos?"/>
 			<div class="flex md:flex-row sm:flex-col gap-4">
 				<div class="lg:w-3/4 md:w-3/5 sm:w-100">
@@ -187,22 +188,23 @@ import Layout from "../layouts/Layout.astro";
 			</div>
 		</section>
 
-		<section id="diplomas" class="min-h-[21rem]">
+		<section id="diplomas" class="min-h-[21rem] w-full">
 			<Title title="Diplomas"/>
 			<div class="flex gap-6 justify-around mb-4">
 				<img class="object-cover h-auto border-barley-corn-400 md:border-8 md:w-80 sm:w-20 sm:border-2 " src="../../public/images/diploma-1.jpg" alt="">
 				<img class="object-cover h-auto border-barley-corn-400 md:border-8 md:w-80 sm:w-20 sm:border-2 " src="../../public/images/certificado.jpg" alt="">
 				<img class="object-cover h-auto border-barley-corn-400 md:border-8 md:w-80 sm:w-20 sm:border-2 " src="../../public/images/diploma-2.jpg" alt="">
 			</div>
-			<img class="object-cover h-auto w-2/4 mx-auto border-8 border-barley-corn-400" src="../../public/images/diploma-central.jpg" alt="">
+			<img class="object-cover lg:h-[25rem] lg:w-[25rem] md:h-[21rem] md:w-[21rem] sm:border-2 sm:h-[10rem] sm:w-[10rem] mx-auto md:border-8 border-barley-corn-400" src="../../public/images/diploma-central.jpg" alt="">
 		</section> 
-		<section id="contacto">
-			<div class="bg-primary p-6 rounded-lg shadow-md w-full max-w-3xl">
+
+		<section id="contacto" class="md:w-3/5 sm:w-full">
+			<div class="bg-primary p-6 rounded-lg shadow-md mx-auto w-full max-w-6xl mb-3">
 				<h2 class="text-2xl font-bold text-white mb-4">CONTACTO:</h2>
 				<p class="text-white mb-4">Complete el formulario con sus datos:</p>
 				<form id="contactForm" class="space-y-4">
 				  <div>
-					<input type="text" name="name" placeholder="Su Nombre y apellido..." class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-zinc-800">
+					<input type="text" name="name" placeholder="Su nombre y apellido..." class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-zinc-800">
 				  </div>
 				  <div>
 					<input type="email" name="email" placeholder="Su dirección de email..." class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-zinc-800">
@@ -211,14 +213,11 @@ import Layout from "../layouts/Layout.astro";
 					<textarea name="message" rows="4" placeholder="Su mensaje..." class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-zinc-800"></textarea>
 				  </div>
 				  <div>
-					<button type="submit" class="w-full bg-primary text-white py-2 px-4 rounded hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-zinc-800">ENVIAR</button>
+					<button type="submit" class="w-full bg-barley-corn-300 text-white py-2 px-4 rounded hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-zinc-800">ENVIAR</button>
 				  </div>
 				</form>
-				<div class="mt-4 text-white">
-				  <p>
-					<i class="fas fa-envelope"></i>
-					<a href="mailto:estudiorinaldijuan@gmail.com" class="ml-2">estudiorinaldijuan@gmail.com</a>
-				  </p>
+				<div class="mt-4 text-white mx-auto text-center">
+					<a href="mailto:estudiorinaldijuan@gmail.com" class="ml-2 text-center md:text-base sm:text-xs">estudiorinaldijuan@gmail.com</a>
 				</div>
 			  </div>
 		</section>

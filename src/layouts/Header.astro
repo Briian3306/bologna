@@ -1,24 +1,25 @@
 ---
 ---
-<nav class="bg-barley-corn-50 border-gray-200 fixed top-0 left-0 right-0 z-[10]">
+<nav class="border-gray-200 fixed top-0 left-0 right-0 z-[10]">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-end mx-auto p-4">
     <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
       <button
         type="button"
-        class="text-white bg-primary hover:bg-secondary focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center"
+        onclick="scrollToSection(event, 'contacto')"
+        class="text-white bg-primary hover:bg-secondary focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 text-center"
       >
         Contacto
       </button>
       <button
         data-collapse-toggle="navbar-cta"
         type="button"
-        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-barley-corn-300 focus:outline-none focus:ring-2 focus:ring-gray-200"
         aria-controls="navbar-cta"
         aria-expanded="false"
         id="navbar-toggle"
         onclick="toggleMenu()"
       >
-        <span class="sr-only">Open main menu</span>
+        <span class="sr-only">Abrir Menu</span>
         <svg
           class="w-5 h-5"
           aria-hidden="true"
@@ -40,10 +41,10 @@
       class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
       id="navbar-cta"
     >
-      <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-barley-corn-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+      <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
         <li>
           <a
-            class="block py-2 px-3 md:p-0 text-white rounded md:bg-transparent md:text-barley-corn-700 border-b-2 border-transparent hover:border-barley-corn-600"
+            class="block py-2 px-3 md:p-0 rounded hover:bg-barley-corn-300 md:text-barley-corn-700 border-b-2 border-transparent hover:border-barley-corn-600"
             aria-current="page"
             onclick="scrollToSection(event, 'home')"
           >
@@ -52,7 +53,7 @@
         </li>
         <li>
           <a
-            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-barley-corn-600 border-b-2 border-transparent hover:border-barley-corn-600"
+            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-barley-corn-300 md:hover:bg-transparent md:hover:text-barley-corn-600 border-b-2 border-transparent hover:border-barley-corn-600"
             onclick="scrollToSection(event, 'actividades')"
           >
             Actividades
@@ -60,7 +61,7 @@
         </li>
         <li>
           <a
-            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-barley-corn-600 border-b-2 border-transparent hover:border-barley-corn-600"
+            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-barley-corn-300 md:hover:bg-transparent md:hover:text-barley-corn-600 border-b-2 border-transparent hover:border-barley-corn-600"
             onclick="scrollToSection(event, 'quien-soy')"
           >
             Quién soy
@@ -68,7 +69,7 @@
         </li>
         <li>
           <a
-            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-barley-corn-600 border-b-2 border-transparent hover:border-barley-corn-600"
+            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-barley-corn-300 md:hover:bg-transparent md:hover:text-barley-corn-600 border-b-2 border-transparent hover:border-barley-corn-600"
             onclick="scrollToSection(event, 'sobre-mi')"
           >
             Sobre mi
@@ -76,7 +77,7 @@
         </li>
         <li>
           <a
-            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-barley-corn-600 border-b-2 border-transparent hover:border-barley-corn-600"
+            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-barley-corn-300 md:hover:bg-transparent md:hover:text-barley-corn-600 border-b-2 border-transparent hover:border-barley-corn-600"
             onclick="scrollToSection(event, 'prensa')"
           >
             Prensa
@@ -84,7 +85,7 @@
         </li>
         <li>
           <a
-            class="mr-4 block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-barley-corn-600 border-b-2 border-transparent hover:border-barley-corn-600"
+            class="mr-4 block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-barley-corn-300 md:hover:bg-transparent md:hover:text-barley-corn-600 border-b-2 border-transparent hover:border-barley-corn-600"
             onclick="scrollToSection(event, 'bologna')"
           >
             Bologna
@@ -133,3 +134,13 @@
     });
   });
 </script>
+
+<style>
+  		nav {
+		  background-color: rgba(248, 247, 238, 0.8); /* Ajusta los valores RGBA según el color deseado */
+		  backdrop-filter: blur(10px); /* Ajusta el valor del desenfoque según sea necesario */
+		}
+    a {
+      cursor: pointer;
+    }
+</style>
