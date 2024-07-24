@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Host
+Host: https://juanrinaldibologna.com
+
+# Sitemap
+Sitemap: https://juanrinaldibologna.com/sitemap.xml
