@@ -69,7 +69,7 @@ import Layout from "../layouts/Layout.astro";
 			</div>
 		</section>
 
-		<section id="quien-soy" class="">
+		<section id="quien-soy" class="animation">
 			<h1 class="font-bold text-balance text-center lg:text-8xl md:text-6xl sm:text-6xl ">
 				“Soy especialista en Análisis Laboral”
 			</h1>
@@ -77,7 +77,7 @@ import Layout from "../layouts/Layout.astro";
 
 		<section class="min-h-[26rem] w-full flex flex-col items-center">
 			<div class="min-h-[26rem] text-white flex md:flex-row sm:flex-col flex-nowrap gap-10 justify-center ">
-				<div class="flex-1 cursor-pointer bg-barley-corn-400 p-8 rounded-lg group">
+				<div class="flex-1 cursor-pointer bg-barley-corn-400 p-8 rounded-lg group zoom-in">
 					<h3 class="text-4xl font-bold mb-3 relative transition-all duration-300 group-hover:text-barley-corn-800">
 						Formación
 						<span class="absolute bottom-0 left-0 w-0 h-[2px] bg-barley-corn-800 transition-all duration-300 group-hover:w-full"></span>
@@ -101,7 +101,7 @@ import Layout from "../layouts/Layout.astro";
 					</ul>
 				</div>
 
-				<div class="flex-1 cursor-pointer bg-barley-corn-400 p-8 rounded-lg group">
+				<div class="flex-1 cursor-pointer bg-barley-corn-400 p-8 rounded-lg group zoom-in">
 					<h3 class="text-4xl font-bold mb-3 relative transition-all duration-300 group-hover:text-barley-corn-800">
 						Experiencia
 						<span class="absolute bottom-0 left-0 w-0 h-[2px] bg-barley-corn-800 transition-all duration-300 group-hover:w-full"></span>
@@ -181,7 +181,7 @@ import Layout from "../layouts/Layout.astro";
 
 		<section id="quienes-somos" class="min-h-[21rem] w-full">
 			<Title title="¿Quienes somos?"/>
-			<div class="flex md:flex-row sm:flex-col gap-4 bg-barley-corn-50">
+			<div class="flex md:flex-row sm:flex-col gap-4 bg-barley-corn-50 fade-in-up">
 				<div class="lg:w-3/4 md:w-3/5 sm:w-100">
 					<p class="mb-3 lg:text-2xl md:text-xl sm:text-xs">La Asociación de Especialistas en Relaciones Laborales Ex Becarios de la Universidad de Bologna, Centro Internacional de Formación de la OIT y de la Universidad de Castilla - La Mancha (Sección Argentina), conocida como “Grupo Bologna”, fue constituida en el mes de mayo del año 2007 bajo la ﬁgura de asociación civil sin ﬁnes de lucro, con el propósito de nuclear a los participantes ex becarios del “Curso para expertos latinoamericanos en relaciones del trabajo”</p>
 					<p class="mb-3 lg:text-2xl md:text-xl sm:text-xs">Tenemos como objeto promover, fomentar y difundir las disciplinas relacionadas con el trabajo, las relaciones laborales y las que resulten científica y técnicamente aﬁnes, con una especial vocación triparta (trabajadores, empleadores y Estado)</p>
@@ -199,7 +199,7 @@ import Layout from "../layouts/Layout.astro";
 		<section id="diplomas" class="min-h-[21rem] w-full">
 			<Title title="Diplomas"/>
 			<div class="flex flex-col align-middle justify-center">
-				<div class="flex gap-6 justify-around mb-4">
+				<div class="flex gap-6 justify-around mb-4 fade-in-up">
 					<a href="./images/diploma-1.jpg" target="_blank" rel="noopener noreferrer">
 					<img alt="Diploma 1" loading="lazy" class="object-cover h-auto border-barley-corn-400 md:border-8 md:w-80 sm:w-20 sm:border-2" src="./images/diploma-1.jpg">
 					</a>
@@ -210,7 +210,7 @@ import Layout from "../layouts/Layout.astro";
 					<img alt="Diploma 2" loading="lazy" class="object-cover h-auto border-barley-corn-400 md:border-8 md:w-80 sm:w-20 sm:border-2" src="./images/diploma-2.jpg">
 					</a>
 				</div>
-				<a href="./images/diploma-central.jpg" target="_blank" rel="noopener noreferrer" class="inline-block mx-auto">
+				<a href="./images/diploma-central.jpg" target="_blank" rel="noopener noreferrer" class="inline-block mx-auto fade-in-up">
 					<img alt="Titulo" loading="lazy" class="object-cover lg:h-[25rem] lg:w-[25rem] md:h-[21rem] md:w-[21rem] sm:border-2 sm:h-[10rem] sm:w-[10rem] mx-auto md:border-8 border-barley-corn-400" src="./images/diploma-central.jpg">
 				</a>	
 			</div>
@@ -274,6 +274,24 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 
 <script is:inline>
+	const the_animation = document.querySelectorAll('.animation')
+
+	const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('scroll-animation');
+          entry.target.classList.add('scroll-zoom-in');
+          entry.target.classList.add('scroll-fade-in-up');
+        }
+      });
+    });
+
+    document.querySelectorAll('.animation, .zoom-in, .fade-in-up').forEach(element => {
+      observer.observe(element);
+    });
+
+
+
 	document.getElementById('contactForm').addEventListener('submit', async function(event) {
 	  event.preventDefault();
   

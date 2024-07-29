@@ -12,7 +12,8 @@ import Header from './Header.astro';
 		<title>Juan Rinaldi: Abogado Especialista en Derecho Laboral y Representante Internacional</title>
 		<meta name="description" content="Conozca a Juan Rinaldi, destacado abogado y especialista en Derecho Laboral, con una amplia trayectoria en el ámbito internacional. Abogado por la Universidad de Morón y especialista en Derecho del Trabajo por la Universidad de Salamanca. Ha representado a Argentina en la OIT y participado en importantes conferencias y cursos internacionales sobre normas laborales. Director en el Instituto de Derecho Social y del Trabajo y académico en la Universidad de Belgrano. Descubra más sobre su carrera y contribuciones en el campo del derecho laboral.">
 		<meta name="keywords" content="Juan Rinaldi, abogado, especialista en derecho laboral, OIT, grupo bologna, derecho del trabajo, Universidad de Morón, Universidad de Salamanca, Instituto de Derecho Social y del Trabajo, Universidad de Belgrano">
-	
+		<link rel="canonical" href="https://juanrinaldibologna.com">
+		<meta property="og:title" content="Juan Rinaldi: Abogado Especialista en Derecho Laboral y Representante Internacional">
 	</head>
 
 	<body class="bg-barley-corn-50 relative h-full w-full ">
@@ -80,4 +81,42 @@ import Header from './Header.astro';
 		z-index: -1;
 		opacity: 0.2; /* Adds overall opacity */
 		}
+
+	.animation {
+		opacity: 0;
+		transform: translateY(-100px);
+		transition: all 0.5s ease-out;
+		transition-delay: 0.3s;
+	}
+
+	.scroll-animation {
+		opacity: 1;
+		transform: translateY(0);
+		transition-delay: 0.3s;
+	}
+
+	.zoom-in {
+		opacity: 0;
+		transform: scale(0.5);
+		transition: all 0.5s ease-out;
+		transition-delay: 0.3s;
+	}
+
+	.scroll-zoom-in {
+		opacity: 1;
+		transform: scale(1);
+		transition-delay: 0.3s;
+	}
+
+	.fade-in-up {
+		opacity: 0;
+		transform: translateY(20px);
+		transition: all 0.5s ease-out;
+		transition-delay: 0.3s;
+	}
+
+	.scroll-fade-in-up {
+		opacity: 1;
+		transform: translateY(0);
+	}
 </style>

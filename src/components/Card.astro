@@ -11,7 +11,7 @@ interface Props {
 const { title, subtitle, texts, url_image, imagePosition = 'right', border = true } = Astro.props;
 ---
 
-<div class={`flex bg-barley-corn-50 sm:flex-col md:flex-row lg:flex-row gap-4 items-stretch transition-transform hover:scale-105 min-h-[550px] ${border ? 'border-l-4 border-barley-corn-400 pl-4' : ''} ${imagePosition === 'left' ? 'md:flex-row-reverse' : ''}`}>
+<div class={`fade-in-up flex bg-barley-corn-50 sm:flex-col md:flex-row lg:flex-row gap-4 items-stretch transition-transform hover:scale-105 min-h-[550px] ${border ? 'border-l-4 border-barley-corn-400 pl-4' : ''} ${imagePosition === 'left' ? 'md:flex-row-reverse' : ''}`}>
     <div class="w-full md:w-2/5 lg:w-3/5 flex flex-col">
         {title && <h2 class="font-bold mb-2 text-barley-corn-200 lg:text-6xl md:text-4xl sm:text-3xl">{title}</h2>}
         {subtitle && <h3 class="font-bold mb-3 lg:text-4xl md:text-2xl sm:text-2xl">{subtitle}</h3>}
