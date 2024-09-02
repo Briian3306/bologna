@@ -8,37 +8,37 @@ import Layout from "../layouts/Layout.astro";
 	<main class="flex flex-col mx-auto lg:w-11/12 md:w-11/12 sm:w-11/12 xs:text-xs gap-20">
 
 		<section id="home" class="min-h-[100vh] w-full flex flex-col mb-6">
-			<div class="flex-1 flex items-stretch ">
-				<div class="min-h-100 flex flex-nowrap justify-center  lg:flex-row md:flex-col-reverse sm:flex-col-reverse items-center gap-2">
-						<div class="sm:h-1/2 md:w-full lg:w-1/2 flex flex-col gap-2 flex-grow-0 justify-center">
+			<div class="flex-1 flex justify-center">
+				<div class="min-h-100 min-w-100  flex flex-nowrap justify-center items-stretch  lg:flex-row md:flex-row sm:flex-col-reverse gap-2">
+						<div class="flex-1 flex flex-col gap-2 h-100 justify-center ">
 							<header>
 								<h1 class="md:text-7xl sm:text-5xl font-bold animate-fade-in">Juan Rinaldi</h1>
 								<h2 class="md:text-7xl sm:text-5xl font-bold mb-3 animate-fade-in animate-delay-200">Grupo Bologna</h2>
 							</header>
 							<section>
 								<article>
-									<p class="md:text-2xl sm:text-xl mb-1 pr-6">
+									<p class="md:text-2xl sm:text-xl mb-2 pr-6 text-balance">
 									Abogado por la Facultad de Derecho y Ciencias Sociales de la Universidad de Morón (1987).
 									</p>
-									<p class="md:text-2xl sm:text-xl pr-6">
+									<p class="md:text-2xl sm:text-xl pr-6 text-balance">
 									Especialista en Derecho, Política y Criminología en el Derecho del Trabajo por la Universidad de Salamanca (1998 y 1999).
 									</p>
 								</article>
 							</section>
 						</div>
-						<div class="sm:h-1/2 md:w-full lg:w-1/2 flex items-center justify-center">
-							<div class="aspect-w-16 aspect-h-9 my-auto animate-bouncing">
+						<div class="flex-1 sm:h-1/4 md:h-3/4  my-auto flex items-center justify-center">
+							<div class="relative w-full h-full max-w-full max-h-full aspect-w-16 aspect-h-9 animate-bouncing">
 								<img
 								loading="lazy"
-								class="h-auto max-w-full object-contain m-auto"
-								src="./images/juan-rinaldi.jpg"
+								class="absolute inset-0 max-h-full max-w-full w-auto h-auto object-contain m-auto"
+								src="./images/juan--rinaldi.jpg"
 								alt="Juan Rinaldi"
 								/>
 							</div>	
 						</div>
 				</div>
 			</div>
-			<div class="flex-shrink-0 h-16">
+			<div class="flex-none h-16">
 				<p class="bg-barley-corn-50 font-bold text-center md:text-xl sm:text-xs">
 					36 años de experiencia en el ámbito laboral, indagando
 					incansablemente la aplicación de las normas y en ejercicio
@@ -46,6 +46,30 @@ import Layout from "../layouts/Layout.astro";
 				</p>
 			</div>
 		</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 		<section id="actividades" class="min-h-[42rem] w-full bg-primary text-white flex justify-center items-center w-100 rounded-lg">
 			<div class="p-10 flex flex-col">
@@ -111,7 +135,7 @@ import Layout from "../layouts/Layout.astro";
 						<li class="lg:text-2xl md:text-xl sm:text-base">Abogado en distintos gremios y apoderado del CGT hasta 2005.</li>
 						<li class="lg:text-2xl md:text-xl sm:text-base">Superintendente de Salud en 2009</li>
 						<li class="lg:text-2xl md:text-xl sm:text-base">Apoderado de Banco Macro en 2020</li>
-						<li class="lg:text-2xl md:text-xl sm:text-base">Apoderado de Jorge Brito</li>
+						<li class="lg:text-2xl md:text-xl sm:text-base">Asesor de Recursos humanos en CGC</li>
 						<li class="lg:text-2xl md:text-xl sm:text-base">Asesor del Directorio de Edenor desde 2023
 						</li>
 					</ul>
@@ -126,7 +150,7 @@ import Layout from "../layouts/Layout.astro";
 				texts={[
 					"Abogado por la Facultad de Derecho y Ciencias Sociales de la Universidad de Morón (1987).",
 					"Especialista en Derecho, Política y Criminología en Derecho del Trabajo por la Universidad de Salamanca (1998 y 1999).",
-					"En 2001 tuve el honor de participar en el dictado de clases en la Universidad de Bologna, en Italia, invitado por el Dr. Patricio Maraniello, Juez Federal del Juzgado N.º 5 Civil y Comercial de la Capital Federal y Presidente de la Asociación Argentina de Justicia Constitucional (AAJC).",
+					"En 2001 tuve el honor de participar en el dictado de clases en la Universidad de Bologna, en Italia, invitado por el Presidente de la Asociación Argentina de Justicia Constitucional (AAJC).",
 					"También representé a Argentina en Suiza, Ginebra, en su 111a Conferencia Anual por ser delegado de la OIT (Organización Internacional del Trabajo).",
 					"Se abordaron temas muy importantes sobre la economía mundial, entre ellos: una transición justa hacia economías sostenibles e inclusivas, aprendizajes de calidad, y la protección de los trabajadores.",
 					"Culminando en 2023 en un encuentro anual de Especialistas en Relaciones Laborales Grupo Bologna, Castilla - La Mancha, Turín, que se celebró en esta oportunidad en San Pablo, Brasil.",
@@ -136,7 +160,24 @@ import Layout from "../layouts/Layout.astro";
 				imagePosition="left" 
 				border={false}
 			/>
-			
+			<div class="fade-in-up flex lg:flex-row md:flex-row sm:flex-row gap-1 mt-4">
+				<div class="flex-1 flex justify-center">
+					<img 
+					  src="./images/CGC-1.jpg" 
+					  alt="Formación" 
+					  loading="lazy" 
+					  class="lg:w-1/2 md:w-3/4 h-full lg:max-h-[400px] md:max-h-[400px] sm:max-h-[500px]" 
+					/>
+				</div>
+				<div class="flex-1 flex justify-center">
+					<img 
+					  src="./images/CGC-2.jpg" 
+					  alt="Formación" 
+					  loading="lazy" 
+					  class="lg:w-1/2 md:w-3/4 h-full lg:max-h-[400px] md:max-h-[400px] sm:max-h-[500px]" 
+					/>
+				</div>
+			  </div>
 		</section>
 
 		<section id="prensa" class="min-h-[42rem] w-full">
