@@ -10,17 +10,17 @@ import Layout from "../layouts/Layout.astro";
 		<section id="home" class="min-h-[100vh] w-full flex flex-col mb-6">
 			<div class="flex-1 flex justify-center">
 				<div class="min-h-100 min-w-100  flex flex-nowrap justify-center items-stretch  lg:flex-row md:flex-row sm:flex-col-reverse gap-2">
-						<div class="flex-1 flex flex-col gap-2 h-100 justify-center ">
+						<div class="flex-1 flex flex-col gap-4 h-100 justify-center ">
 							<header>
 								<h1 class="md:text-7xl sm:text-5xl font-bold animate-fade-in">Juan Rinaldi</h1>
 								<h2 class="md:text-7xl sm:text-5xl font-bold mb-3 animate-fade-in animate-delay-200">Grupo Bologna</h2>
 							</header>
 							<section>
 								<article>
-									<p class="md:text-2xl sm:text-xl mb-2 pr-6 text-balance">
+									<p class="md:text-2xl sm:text-xl mb-2 pr-6 text-wrap">
 									Abogado por la Facultad de Derecho y Ciencias Sociales de la Universidad de Morón (1987).
 									</p>
-									<p class="md:text-2xl sm:text-xl pr-6 text-balance">
+									<p class="md:text-2xl sm:text-xl pr-6 text-wrap">
 									Especialista en Derecho, Política y Criminología en el Derecho del Trabajo por la Universidad de Salamanca (1998 y 1999).
 									</p>
 								</article>
@@ -88,6 +88,9 @@ import Layout from "../layouts/Layout.astro";
 					<li class="font-bold lg:text-4xl lg:py-8 md:text-3x1 md:py-4 sm:text-2x1 sm:py-2">
 						03 - Director académico de la Diplomatura en Relaciones
 						Laborales en la Universidad de Belgrano
+					</li>
+					<li class="font-bold lg:text-4xl lg:py-8 md:text-3x1 md:py-4 sm:text-2x1 sm:py-2">
+						04 - Profesor invitado estable en Facultad de Ciencias Económicas de la UBA
 					</li>
 				</ul>
 			</div>
@@ -157,7 +160,6 @@ import Layout from "../layouts/Layout.astro";
 					"He realizado diferentes cursos en esta Universidad, especializándome en Normas Internacionales del Trabajo, los cuales han sido muy enriquecedores para mi carrera, desempeñándome desde el año 1989, con 33 años de experiencia en el rubro."
 				]}
 				url_image="./images/sobre-mi.jpg" 
-				imagePosition="left" 
 				border={false}
 			/>
 			<div class="fade-in-up flex lg:flex-row md:flex-row sm:flex-row gap-1 mt-4">
@@ -166,7 +168,7 @@ import Layout from "../layouts/Layout.astro";
 					  src="./images/CGC-1.jpg" 
 					  alt="Formación" 
 					  loading="lazy" 
-					  class="lg:w-1/2 md:w-3/4 h-full lg:max-h-[400px] md:max-h-[400px] sm:max-h-[500px]" 
+					  class="lg:w-10/12 md:w-3/4 h-full lg:max-h-[400px] md:max-h-[400px] sm:max-h-[500px] transition-all duration-300 hover:scale-105 cursor-pointer hover:shadow-lg hover:shadow-gray-400" 
 					/>
 				</div>
 				<div class="flex-1 flex justify-center">
@@ -174,7 +176,23 @@ import Layout from "../layouts/Layout.astro";
 					  src="./images/CGC-2.jpg" 
 					  alt="Formación" 
 					  loading="lazy" 
-					  class="lg:w-1/2 md:w-3/4 h-full lg:max-h-[400px] md:max-h-[400px] sm:max-h-[500px]" 
+					  class="lg:w-10/12 md:w-3/4 h-full lg:max-h-[400px] md:max-h-[400px] sm:max-h-[500px] transition-all duration-300 hover:scale-105 cursor-pointer hover:shadow-lg hover:shadow-gray-400" 
+					/>
+				</div>
+				<div class="flex-1 flex justify-center">
+					<img 
+					  src="./images/juan-rinaldi-uba.jpg" 
+					  alt="Formación" 
+					  loading="lazy" 
+					  class="lg:w-10/12 md:w-3/4 h-full lg:max-h-[400px] md:max-h-[400px] sm:max-h-[500px] transition-all duration-300 hover:scale-105 cursor-pointer hover:shadow-lg hover:shadow-gray-400" 
+					/>
+				</div>
+				<div class="flex-1 flex justify-center">
+					<img 
+					  src="./images/juan-rinaldi-uba-salon.jpg" 
+					  alt="Formación" 
+					  loading="lazy" 
+					  class="lg:w-10/12 md:w-3/4 h-full lg:max-h-[400px] md:max-h-[400px] sm:max-h-[500px] transition-all duration-300 hover:scale-105 cursor-pointer hover:shadow-lg hover:shadow-gray-400" 
 					/>
 				</div>
 			  </div>
@@ -231,8 +249,8 @@ import Layout from "../layouts/Layout.astro";
 					<p class="mb-3 lg:text-2xl md:text-xl sm:text-xs">Por tales motivos, orgullosamente contamos entre nuestra nómina de socias y socios con destacados miembros del mundo del Trabajo, referentes de los actores sociales, funcionarios/as de gobierno, asesores de sindicatos y de las organizaciones empresarias; todas y todos con amplia trayectoria académica y profesional. Incluso, muchos/as de ellos/as son o han sido consultores de la OIT o han integrado la Organización en sus órganos de gestión o en áreas técnicas.</p>
 				</div>
 				<div class="flex gap-2 md:flex-col lg:w-1/4 md:w-2/5 sm:flex-row sm:w-100">
-					<img loading="lazy" src="./images/quienes-somos-1.jpg" alt="Grupo Bologna" class="object-cover w-full lg:h-96 md:h-80 sm:h-[250px] sm:object-center" />
-					<img loading="lazy" src="./images/quienes-somos-2.jpeg" alt="Grupo Bologna" class="object-cover w-full lg:h-96 md:h-80 sm:h-[250px] sm:object-top" />
+					<img loading="lazy" src="./images/quienes-somos-1.jpg" alt="Grupo Bologna" class="object-cover w-full lg:h-96 md:h-80 sm:h-[250px] sm:object-center transition-all duration-300 ease-in-out hover:brightness-75 cursor-pointer" />
+					<img loading="lazy" src="./images/quienes-somos-2.jpeg" alt="Grupo Bologna" class="object-cover w-full lg:h-96 md:h-80 sm:h-[250px] sm:object-top transition-all duration-300 ease-in-out hover:brightness-75 cursor-pointer" />
 				</div>
 			</div>
 		</section>
