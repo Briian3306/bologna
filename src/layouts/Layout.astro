@@ -4,7 +4,7 @@ import Header from './Header.astro';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,26 +16,23 @@ import Header from './Header.astro';
 		<meta property="og:title" content="Juan Rinaldi: Abogado Especialista en Derecho Laboral y Representante Internacional">
 	</head>
 
-	<body class="bg-barley-corn-50 relative h-full w-full ">
+	<body class="bg-barley-corn-50 relative h-full w-full pt-20">
 		<div class="custom-mask"></div>
 		<Header/>
 		<slot />
-		<a class="ir-arriba" href="#" title="Volver arriba">
-			<span class="fa-stack">
-			  <i class="fa fa-circle fa-stack-2x"></i>
-			  <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
-			</span>
-		  </a>
-		  <button id="scrollTopButton" class="hidden fixed bottom-10 right-10 bg-barley-corn-600 text-white p-3 rounded-full shadow-lg hover:bg-barley-corn-700 transition-opacity duration-300">
-			<svg fill="#000000" height="30px" width="30px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-				viewBox="0 0 330 330" xml:space="preserve">
-				<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+		<button
+			type="button"
+			id="scrollTopButton"
+			aria-label="Volver arriba"
+			class="hidden fixed bottom-4 right-4 md:bottom-10 md:right-10 bg-barley-corn-600 text-white p-3 rounded-full shadow-lg hover:bg-barley-corn-700 transition-opacity duration-300 z-20"
+		>
+			<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 330 330" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+				<path d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
 					l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
 					C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
 			</svg>
-		  </button>
-		  <script>
-			// JavaScript para mostrar/ocultar el botón y subir al hacer clic
+		</button>
+		<script>
 			document.addEventListener('DOMContentLoaded', () => {
 			  const scrollTopButton = document.getElementById('scrollTopButton');
 			
@@ -58,7 +55,7 @@ import Header from './Header.astro';
 				});
 			  }
 			});
-		  </script>
+		</script>
 		
 	</body>
 </html>
